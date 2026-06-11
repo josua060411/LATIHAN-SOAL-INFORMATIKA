@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CBT Informatika Kelas 8</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#f4f6f9;
+padding:20px;
+}
+
+.container{
+max-width:900px;
+margin:auto;
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 0 20px rgba(0,0,0,.1);
+}
+
+h1{
+text-align:center;
+margin-bottom:20px;
+}
+
+#timer{
+position:fixed;
+top:10px;
+right:10px;
+background:red;
+color:white;
+padding:10px 15px;
+border-radius:10px;
+font-weight:bold;
+}
+
+input[type=text]{
+width:100%;
+padding:12px;
+margin-bottom:20px;
+border:1px solid #ccc;
+border-radius:8px;
+}
+
+.soal{
+margin-bottom:25px;
+padding:15px;
+border:1px solid #ddd;
+border-radius:10px;
+}
+
+.soal p{
+font-weight:bold;
+margin-bottom:10px;
+}
+
+label{
+display:block;
+padding:5px;
+}
+
+button{
+width:100%;
+padding:15px;
+border:none;
+background:#2563eb;
+color:white;
+font-size:18px;
+border-radius:10px;
+cursor:pointer;
+}
+
+button:hover{
+background:#1d4ed8;
+}
+
+#hasil{
+display:none;
+text-align:center;
+margin-top:20px;
+padding:20px;
+background:#eef;
+border-radius:10px;
+}
+</style>
+</head>
+<body>
+
+<div id="timer">15:00</div>
+
+<div class="container">
+
+<h1>CBT Informatika Kelas 8</h1>
+
+<input type="text" id="nama" placeholder="Masukkan Nama Peserta">
+
+<form id="quiz">
+
+<div class="soal">
+<p>1. Fungsi tombol bendera hijau pada Scratch?</p>
+<label><input type="radio" name="q1" value="A"> Menghapus Program</label>
+<label><input type="radio" name="q1" value="B"> Menjalankan Program</label>
+<label><input type="radio" name="q1" value="C"> Menyimpan Program</label>
+<label><input type="radio" name="q1" value="D"> Menyalin Program</label>
+</div>
+
+<div class="soal">
+<p>2. Tombol merah pada Scratch digunakan untuk?</p>
+<label><input type="radio" name="q2" value="A"> Menambah Sprite</label>
+<label><input type="radio" name="q2" value="B"> Mengubah Kostum</label>
+<label><input type="radio" name="q2" value="C"> Menghentikan Program</label>
+<label><input type="radio" name="q2" value="D"> Menambah Suara</label>
+</div>
+
+<div class="soal">
+<p>3. Rumus Excel untuk rata-rata?</p>
+<label><input type="radio" name="q3" value="A"> SUM</label>
+<label><input type="radio" name="q3" value="B"> MAX</label>
+<label><input type="radio" name="q3" value="C"> AVERAGE</label>
+<label><input type="radio" name="q3" value="D"> MIN</label>
+</div>
+
+<div class="soal">
+<p>4. Rumus Excel untuk nilai tertinggi?</p>
+<label><input type="radio" name="q4" value="A"> MAX</label>
+<label><input type="radio" name="q4" value="B"> SUM</label>
+<label><input type="radio" name="q4" value="C"> MIN</label>
+<label><input type="radio" name="q4" value="D"> COUNT</label>
+</div>
+
+<div class="soal">
+<p>5. Rumus Excel untuk nilai terendah?</p>
+<label><input type="radio" name="q5" value="A"> MAX</label>
+<label><input type="radio" name="q5" value="B"> MIN</label>
+<label><input type="radio" name="q5" value="C"> SUM</label>
+<label><input type="radio" name="q5" value="D"> COUNT</label>
+</div>
+
+<div class="soal">
+<p>6. Objek dalam Scratch disebut?</p>
+<label><input type="radio" name="q6" value="A"> Stage</label>
+<label><input type="radio" name="q6" value="B"> Motion</label>
+<label><input type="radio" name="q6" value="C"> Sprite</label>
+<label><input type="radio" name="q6" value="D"> Script</label>
+</div>
+
+<div class="soal">
+<p>7. Blok Motion digunakan untuk?</p>
+<label><input type="radio" name="q7" value="A"> Menggerakkan Sprite</label>
+<label><input type="radio" name="q7" value="B"> Mengubah Warna</label>
+<label><input type="radio" name="q7" value="C"> Menambah Suara</label>
+<label><input type="radio" name="q7" value="D"> Menyimpan Data</label>
+</div>
+
+<div class="soal">
+<p>8. Copy berarti?</p>
+<label><input type="radio" name="q8" value="A"> Menghapus</label>
+<label><input type="radio" name="q8" value="B"> Menyalin</label>
+<label><input type="radio" name="q8" value="C"> Memindah</label>
+<label><input type="radio" name="q8" value="D"> Menempel</label>
+</div>
+
+<div class="soal">
+<p>9. Cyberbullying adalah?</p>
+<label><input type="radio" name="q9" value="A"> Bermain Game</label>
+<label><input type="radio" name="q9" value="B"> Belajar Online</label>
+<label><input type="radio" name="q9" value="C"> Perundungan di Dunia Digital</label>
+<label><input type="radio" name="q9" value="D"> Membuat Akun</label>
+</div>
+
+<div class="soal">
+<p>10. Tindakan yang tepat jika menjadi korban cyberbullying?</p>
+<label><input type="radio" name="q10" value="A"> Membalas</label>
+<label><input type="radio" name="q10" value="B"> Mengancam</label>
+<label><input type="radio" name="q10" value="C"> Melapor dan Simpan Bukti</label>
+<label><input type="radio" name="q10" value="D"> Ikut Mengejek</label>
+</div>
+
+<button type="button" onclick="selesaiUjian()">
+Kumpulkan Jawaban
+</button>
+
+</form>
+
+<div id="hasil"></div>
+
+</div>
+
+<script>
+
+let waktu = 900;
+
+let timer = setInterval(() => {
+
+let menit = Math.floor(waktu / 60);
+let detik = waktu % 60;
+
+document.getElementById("timer").innerHTML =
+`${menit}:${detik < 10 ? "0" : ""}${detik}`;
+
+waktu--;
+
+if(waktu < 0){
+clearInterval(timer);
+selesaiUjian();
+}
+
+},1000);
+
+function selesaiUjian(){
+
+clearInterval(timer);
+
+const kunci = {
+q1:"B",
+q2:"C",
+q3:"C",
+q4:"A",
+q5:"B",
+q6:"C",
+q7:"A",
+q8:"B",
+q9:"C",
+q10:"C"
+};
+
+let benar = 0;
+
+for(let key in kunci){
+
+let jawaban =
+document.querySelector(`input[name="${key}"]:checked`);
+
+if(jawaban && jawaban.value === kunci[key]){
+benar++;
+}
+
+}
+
+let nilai = benar * 10;
+
+let status = nilai >= 75 ?
+"✅ LULUS" :
+"❌ TIDAK LULUS";
+
+let nama = document.getElementById("nama").value;
+
+document.getElementById("hasil").style.display="block";
+
+document.getElementById("hasil").innerHTML =
+`
+<h2>Hasil CBT</h2>
+<p><b>Nama:</b> ${nama}</p>
+<p><b>Benar:</b> ${benar}/10</p>
+<p><b>Nilai:</b> ${nilai}</p>
+<h2>${status}</h2>
+`;
+
+window.scrollTo(0,document.body.scrollHeight);
+}
+</script>
+
+</body>
+</html>
